@@ -84,7 +84,6 @@ const logoutBtn = document.getElementById('logout-btn');
 
 logoutForm.addEventListener('submit', async (e) => {
   e.preventDefault();
-  alert('salam');
   logout();
 });
 
