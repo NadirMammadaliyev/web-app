@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Darkness</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+		<h1>Welcome my website!</h1>
+        <form id="logout-form">
+            <button type="submit" id="logout-btn">Logout</button>
+        </form>
+	</div>
+    <!-- <script src="main.js"></script> -->
+</body>
+
+<script>
+    const logoutForm = document.querySelector('#logout-form');
+const logoutBtn = document.getElementById('logout-btn');
+
+logoutForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  alert('salam');
+  logout();
+});
+
+function logout() {
+  fetch("https://bumblebee-b374.onrender.com/api/v1/auth/logout", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem("token")}`,
+    },
+  })
+    .then((res) => {
+      if (res.ok) {
+        localStorage.removeItem("token");
+        window.location.href = "index.html";
+      }
+    })
+    .catch((err) => console.log(err));
+}
+</script>
+</html>
+

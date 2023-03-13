@@ -1,0 +1,69 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center; /* burada yatayda ortalamak için ayar yapıyoruz */
+  align-items: center; /* burada dikeyde ortalamak için ayar yapıyoruz */
+}
+
+.container {
+  margin: 50px auto;
+  width: 400px;
+  padding: 20px;
+  background-color: #222;
+  border-radius: 10px;
+}
+
+.container h1 {
+  margin-top: 0;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input[type="email"], input[type="password"], input[type="text"] {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  width: 250px; /* burada boyut ayarı yapıyoruz */
+}
+
+button[type="submit"] {
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100px; /* burada boyut ayarı yapıyoruz */
+  margin: 0 auto; /* burada yatayda ortalamak için margin ayarı yapıyoruz */
+  display: block; /* burada butonun blok öğesi olarak görüntülenmesini sağlıyoruz */
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
